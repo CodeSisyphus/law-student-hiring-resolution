@@ -1,47 +1,68 @@
-# Let Law Students Become Law Students First
+# BADC / ABA Resolution: Let Law Students Become Law Students First
 
-A one-page campaign site for the Bar Association of the District of Columbia (BADC) resolution before the ABA House of Delegates on accelerated law-firm recruiting. It hosts the on-site pamphlet and a full-resource page (resolution text, report, coalition, and citations).
+This is the home for everything in the Bar Association of the District of Columbia (BADC)
+campaign for a resolution before the ABA House of Delegates on accelerated law-firm
+recruiting timelines. It holds the live website, the printable pamphlet, the resolution
+draft, and the editable source files.
 
-## Live URL
+**You do not need any technical background to use most of this.** This page explains what
+is here and how to make simple changes.
 
-Once published (see below), the site will be at:
+## The live website
 
     https://codesisyphus.github.io/law-student-hiring-resolution/
 
-The QR code printed on the pamphlet points to this exact address. **Keep the repository name `law-student-hiring-resolution`** or the QR code will not resolve. If you must rename it, regenerate the QR (see "Changing the URL" below).
+This is the address the pamphlet's QR code opens. It updates automatically a minute or two
+after any change is saved here.
 
-## Files
+## What is in this repository
 
-- `index.html`: concise, persuasive landing page (what the QR code opens).
-- `resolution.html`: full resolution text, report, coalition list, and sources.
-- `assets/Pamphlet_ABA_Resolution.pdf`: the printable one-page pamphlet.
-- `.nojekyll`: tells GitHub Pages to serve the files as-is.
+Think of this repository as a shared folder. Here is what each part is:
 
-## Publish on GitHub Pages
+| Folder or file | What it is | Can I edit it easily? |
+| --- | --- | --- |
+| `index.html` | The website's main page (what the QR code opens) | Yes, see "Editing the website" below |
+| `resolution.html` | The website's full-resolution page (text, coalition, sources) | Yes, same as above |
+| `documents/` | Ready-to-use files: the printable pamphlet and the resolution draft | These are finished files, download and use them |
+| `pamphlet-source/` | The editable "template" the pamphlet is built from, for a technical helper | Editing here needs some setup, see that folder's guide |
+| `assets/` | A copy of the pamphlet the website links to (leave this one alone) | Do not rename |
 
-1. Create a new **public** repository named `law-student-hiring-resolution` under the `CodeSisyphus` account. Do not add a README, .gitignore, or license when creating it (this folder already has them).
-2. Open a terminal (or Claude Code) in this folder and run:
+### The `documents/` folder holds
 
-       git init
-       git add -A
-       git commit -m "Add BADC / ABA resolution campaign site"
-       git branch -M main
-       git remote add origin https://github.com/CodeSisyphus/law-student-hiring-resolution.git
-       git push -u origin main
+- **Pamphlet - A4 color (print this).pdf** - the final print file. Double-sided A4.
+- **Resolution - DRAFT.docx** - the resolution and report in Word (editable).
+- **Resolution - DRAFT.pdf** - the same resolution and report as a PDF (for reading and sharing).
 
-3. On GitHub, go to **Settings -> Pages**. Under "Build and deployment," set **Source** to **Deploy from a branch**, choose branch **main** and folder **/ (root)**, and click **Save**.
-4. Wait one to two minutes, then open `https://codesisyphus.github.io/law-student-hiring-resolution/`.
+## Editing the website (no technical background needed)
 
-## Update the content
+You can change the words on the website right here in your browser:
 
-Edit the HTML files, then:
+1. Open the file you want to change (`index.html` for the main page, `resolution.html` for
+   the full page). Click its name in the file list above.
+2. Click the **pencil icon** (top right of the file) to edit.
+3. Make your change. The text is surrounded by tags that look like `<p>...</p>`. Just edit
+   the words between the tags and leave the tags alone.
+4. Scroll down, add a short note about what you changed, and click **Commit changes**.
+5. Wait one to two minutes, then refresh the live website to see your edit.
 
-    git add -A
-    git commit -m "Update content"
-    git push
+If something looks wrong, you can always undo: the site keeps a full history of every change.
 
-Pages redeploys automatically within a minute or two.
+## Editing the pamphlet (needs a technical helper)
 
-## Changing the URL
+The pamphlet is a finished PDF. You cannot edit its text or design directly in your browser.
+To change it, a technical helper edits the template in the `pamphlet-source/` folder and
+rebuilds the PDF on their own computer. Step-by-step instructions are in
+`pamphlet-source/HOW-TO-EDIT.md`. Once they produce a new pamphlet PDF, it replaces the two
+copies (the one in `documents/` and the one in `assets/`).
 
-If you publish under a different repo name or a custom domain, regenerate the pamphlet QR code so it points to the new address, then reprint the pamphlet.
+## Two things to never rename
+
+1. **Do not rename this repository** (`law-student-hiring-resolution`). The pamphlet's QR
+   code points to the current address; renaming breaks it.
+2. **Do not rename `assets/Pamphlet_ABA_Resolution.pdf`.** The website links to it by that
+   exact name.
+
+## Questions
+
+- Philippe Lin, plin@vasquezlawdc.com, (812) 345-7083.
+- Lorie Masters, lmasters@hunton.com, (202) 595-4600.
