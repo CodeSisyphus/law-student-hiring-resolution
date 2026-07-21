@@ -5,108 +5,141 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Let Law Students Become Law Students First | BADC Resolution</title>
 <meta name="description" content="A Bar Association of the District of Columbia resolution before the ABA House of Delegates: study the impact of accelerated law-firm recruiting and consider law students' educational, professional, and equitable interests.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#12294a; --navy2:#1a3a63; --gold:#b8860b; --gold-d:#6a4a1f;
-    --ink:#1b2333; --muted:#55617a; --line:#c9d2e0; --panel:#f6f8fb; --white:#fff;
+    --navy:#1c2a39; --navy-deep:#141f2b; --seal:#215aa8;
+    --gold:#b0883b; --gold-light:#d6bc79; --gold-deep:#8a6a2e;
+    --cream:#efe8d7; --cream-line:#ddd2ba;
+    --panel:#ffffff; --ink:#25303f; --muted:#5c6675; --line:#e0e4ea;
+    --serif:"Playfair Display",Georgia,"Times New Roman",serif;
+    --sans:"Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{margin:0;color:var(--ink);background:var(--white);
-    font-family:Georgia,"Times New Roman",serif;line-height:1.55;font-size:18px;}
-  .sans{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;}
-  a{color:var(--navy2);}
-  .wrap{max-width:960px;margin:0 auto;padding:0 22px;}
+  body{margin:0;color:var(--ink);background:var(--cream);
+    font-family:var(--sans);line-height:1.6;font-size:17px;
+    -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px;}
+  a{color:var(--gold-deep);}
 
-  /* top bar */
-  .masthead{border-bottom:2px solid var(--navy);}
-  .masthead .wrap{display:flex;justify-content:space-between;align-items:center;
-    padding-top:14px;padding-bottom:14px;gap:12px;flex-wrap:wrap;}
-  .masthead .org{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-    font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:12.5px;color:var(--gold-d);}
-  .masthead .mtg{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-    font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
+  /* utility strip */
+  .util{background:var(--navy-deep);color:#c7cfda;font-size:12px;}
+  .util .wrap{display:flex;justify-content:space-between;align-items:center;
+    padding:7px 24px;letter-spacing:.04em;}
+  .util .r{color:var(--gold-light);text-transform:uppercase;letter-spacing:.11em;font-weight:600;font-size:11px;}
+
+  /* masthead */
+  .masthead{background:var(--panel);border-bottom:3px solid var(--navy);}
+  .masthead .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:12px 24px;padding:16px 24px;flex-wrap:wrap;}
+  .masthead .wordmark{font-family:var(--sans);font-weight:700;font-size:14px;letter-spacing:.15em;
+    text-transform:uppercase;color:var(--navy);}
+  .masthead .attr{font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.03em;}
 
   /* hero */
-  .hero{background:var(--navy);color:#fff;padding:46px 0 40px;}
-  .hero h1{font-size:40px;line-height:1.08;margin:0 0 10px;letter-spacing:-.01em;}
-  .hero .sub{font-style:italic;color:#cdd8ea;font-size:19px;margin:0 0 26px;max-width:44ch;}
-  .askcard{background:#fff;color:var(--ink);border-left:8px solid var(--gold);
-    border-radius:4px;padding:22px 24px;box-shadow:0 6px 24px rgba(0,0,0,.18);}
-  .askcard .k{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-    font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:var(--gold-d);margin-bottom:8px;}
-  .askcard ol{margin:8px 0 12px;padding-left:22px;}
-  .askcard li{margin-bottom:7px;}
-  .askcard .closer{font-weight:700;color:var(--navy);margin:0;}
-  .btns{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap;}
-  .btn{display:inline-block;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-    font-weight:700;font-size:15px;text-decoration:none;padding:13px 20px;border-radius:5px;}
+  .hero{background:var(--navy);color:#fff;padding:52px 0 46px;
+    border-bottom:4px solid var(--gold);}
+  .hero .kick{font-family:var(--sans);font-weight:700;font-size:12.5px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--gold-light);margin:0 0 16px;}
+  .hero h1{font-family:var(--serif);font-weight:700;font-size:46px;line-height:1.07;
+    margin:0 0 14px;letter-spacing:-.005em;}
+  .hero .sub{font-size:18.5px;color:#cfd8e4;margin:0 0 30px;max-width:46ch;line-height:1.5;}
+
+  .askcard{background:var(--panel);color:var(--ink);border-top:4px solid var(--gold);
+    border-radius:2px;padding:24px 26px 22px;box-shadow:0 10px 30px rgba(0,0,0,.22);max-width:640px;}
+  .askcard .k{font-family:var(--sans);font-weight:700;letter-spacing:.12em;
+    text-transform:uppercase;font-size:12px;color:var(--gold-deep);margin-bottom:10px;}
+  .askcard p{margin:0 0 10px;}
+  .askcard ol{margin:12px 0 0;padding-left:22px;}
+  .askcard li{margin-bottom:9px;}
+  .askcard li:last-child{margin-bottom:0;}
+
+  .btns{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{display:inline-block;font-family:var(--sans);font-weight:700;font-size:15px;
+    text-decoration:none;padding:14px 22px;border-radius:3px;letter-spacing:.01em;transition:opacity .15s;}
   .btn.primary{background:var(--gold);color:#231a05;}
-  .btn.ghost{background:transparent;color:#fff;border:1.5px solid #4a6187;}
-  .btn:hover{opacity:.92;}
+  .btn.ghost{background:transparent;color:#fff;border:1.5px solid #46597a;}
+  .btn:hover{opacity:.88;}
 
   /* stat band */
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:40px 0;}
-  .stat{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:18px 14px;text-align:center;}
-  .stat .n{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-    font-weight:800;font-size:34px;color:var(--navy);line-height:1;}
-  .stat .l{font-size:13.5px;color:var(--muted);margin-top:9px;line-height:1.35;}
+  .band{background:var(--panel);border-bottom:1px solid var(--cream-line);}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);}
+  .stat{padding:26px 16px;text-align:center;border-left:1px solid var(--line);}
+  .stat:first-child{border-left:none;}
+  .stat .n{font-family:var(--serif);font-weight:700;font-size:40px;color:var(--navy);line-height:1;}
+  .stat .l{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:11px;line-height:1.4;}
 
-  section{padding:14px 0;}
-  h2{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-    font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);
-    border-bottom:1px solid var(--line);padding-bottom:8px;margin:34px 0 16px;font-weight:800;}
-  p.lead{font-size:19px;}
-  .concerns{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-  .concern{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--gold);
-    border-radius:5px;padding:16px 18px;}
-  .concern h3{margin:0 0 6px;font-size:18px;color:var(--navy);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;}
-  .concern p{margin:0;font-size:16px;color:#33405a;}
+  /* content */
+  main{background:var(--panel);}
+  main .wrap{padding-top:8px;padding-bottom:8px;}
+  section{padding:26px 0;}
+  h2{font-family:var(--serif);font-weight:700;font-size:27px;color:var(--navy);
+    margin:14px 0 14px;letter-spacing:-.005em;}
+  h2 .rule,.eyebrow{display:block;}
+  .eyebrow{font-family:var(--sans);font-weight:700;font-size:11.5px;letter-spacing:.15em;
+    text-transform:uppercase;color:var(--gold-deep);margin-bottom:6px;}
+  p.lead{font-size:18px;line-height:1.62;color:#2c3746;margin:0;}
 
-  .coalition{background:var(--navy);color:#fff;border-radius:8px;padding:26px 26px 22px;margin-top:10px;}
-  .coalition p{color:#dce4f1;margin:0 0 16px;}
-  .polls{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
-  .poll{background:#0d1f3a;border:1px solid #2a3f63;border-radius:6px;text-align:center;padding:12px 6px;}
-  .poll .p{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-weight:800;font-size:26px;}
-  .poll .w{font-size:12px;color:#aebdd6;margin-top:3px;}
+  .concerns{display:grid;grid-template-columns:1fr 1fr;gap:22px 34px;margin-top:8px;}
+  .concern{padding-left:16px;border-left:2px solid var(--gold);}
+  .concern h3{font-family:var(--serif);font-weight:600;margin:0 0 5px;font-size:19px;color:var(--navy);}
+  .concern p{margin:0;font-size:15.5px;color:#3a4557;line-height:1.5;}
 
-  blockquote{margin:22px 0;padding:6px 0 6px 20px;border-left:4px solid var(--gold);
-    font-style:italic;font-size:20px;color:#22304c;}
-  blockquote .cite{display:block;font-style:normal;font-size:14px;color:var(--gold-d);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-weight:700;margin-top:8px;}
+  .coalition{border:1px solid var(--cream-line);background:#faf6ec;border-radius:3px;
+    padding:22px 24px;margin-top:6px;}
+  .coalition p{margin:0;color:#33405a;font-size:16px;}
+  .coalition .schools{font-weight:600;color:var(--navy);}
 
-  .callout{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:22px 24px;margin:30px 0;text-align:center;}
-  .callout .big{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-    font-weight:800;font-size:22px;color:var(--navy);margin-bottom:6px;}
+  blockquote{margin:8px 0;padding:4px 0 4px 22px;border-left:3px solid var(--gold);
+    font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.42;color:#243044;}
+  blockquote .cite{display:block;font-family:var(--sans);font-style:normal;font-weight:700;
+    font-size:13.5px;color:var(--gold-deep);margin-top:12px;letter-spacing:.02em;}
 
-  footer{background:#0d1f3a;color:#cdd8ea;margin-top:44px;padding:30px 0;font-size:14.5px;}
-  footer a{color:#9fc0ff;}
+  .callout{background:var(--navy);color:#fff;border-radius:3px;padding:30px 28px;margin:14px 0 6px;text-align:center;}
+  .callout .big{font-family:var(--serif);font-weight:700;font-size:26px;margin-bottom:8px;}
+  .callout p{margin:0;color:#cfd8e4;}
+  .callout a{color:var(--gold-light);font-weight:600;}
+
+  footer{background:var(--navy-deep);color:#c1cad6;margin-top:0;padding:32px 0;font-size:14px;line-height:1.6;}
+  footer a{color:var(--gold-light);}
   footer .status{color:#fff;margin-bottom:12px;}
   footer .contacts{margin-bottom:6px;}
 
   @media(max-width:720px){
-    .hero h1{font-size:30px;}
+    .hero h1{font-size:32px;} .hero{padding:40px 0 36px;}
     .stats{grid-template-columns:1fr 1fr;}
+    .stat:nth-child(3){border-left:none;}
+    .stat{border-top:1px solid var(--line);}
+    .stat:first-child,.stat:nth-child(2){border-top:none;}
     .concerns{grid-template-columns:1fr;}
-    .polls{grid-template-columns:1fr 1fr;}
-    body{font-size:17px;}
+    .masthead .org{font-size:17px;}
+    body{font-size:16px;}
   }
 </style>
 </head>
 <body>
 
+<div class="util">
+  <div class="wrap">
+    <span>A Resolution Before the ABA House of Delegates</span>
+    <span class="r">Annual Meeting &middot; Chicago &middot; 2026</span>
+  </div>
+</div>
+
 <header class="masthead">
   <div class="wrap">
-    <span class="org">Bar Association of the District of Columbia</span>
-    <span class="mtg">ABA House of Delegates &middot; 2026</span>
+    <span class="wordmark">Law Student Hiring Cycle Resolution</span>
+    <span class="attr">Sponsored by the Bar Association of the District of Columbia, with a coalition of law schools</span>
   </div>
 </header>
 
 <div class="hero">
   <div class="wrap">
+    <p class="kick">A Resolution Before the ABA House of Delegates</p>
     <h1>Let law students become<br>law students first.</h1>
-    <p class="sub">A resolution on accelerated law-firm recruiting, sponsored by the Bar Association of the District of Columbia.</p>
+    <p class="sub">A resolution on accelerated law-firm recruiting, before the 2026 ABA House of Delegates.</p>
     <div class="askcard">
       <div class="k">What we ask the House to adopt</div>
       <p>A resolution urging law schools, legal employers, bar associations, and other stakeholders to:</p>
@@ -114,80 +147,79 @@
         <li><b>Study</b> how accelerating recruitment timelines affect the quality of legal education, the well-being of law students, and the long-term health of the entry-level hiring market; and</li>
         <li><b>Consider</b>, in their own recruiting practices and policies, the educational, professional, and equitable interests of law students.</li>
       </ol>
-      <p class="closer">It mandates nothing. It blames no one. It asks the profession to study a problem it has already begun to name.</p>
     </div>
     <div class="btns">
-      <a class="btn primary" href="resolution.html">Read the full resolution &amp; data</a>
+      <a class="btn primary" href="resolution.html">Read the full resolution &amp; report</a>
       <a class="btn ghost" href="assets/Pamphlet_ABA_Resolution.pdf">Download the one-page summary (PDF)</a>
     </div>
   </div>
 </div>
 
-<div class="wrap">
-
-  <div class="stats">
-    <div class="stat"><div class="n">85%</div><div class="l">of 2L summer offers now made before July of the 1L year, up from 34% a year earlier</div></div>
-    <div class="stat"><div class="n">80%</div><div class="l">of offers now come through employer-sponsored recruiting, not on-campus interviews</div></div>
-    <div class="stat"><div class="n">25%</div><div class="l">of students knew these timelines before enrolling in law school</div></div>
-    <div class="stat"><div class="n">18</div><div class="l">law-school student governments asked the ABA to act</div></div>
-  </div>
-
-  <section>
-    <h2>Why it matters</h2>
-    <p class="lead">Since 2024, hiring for the largest sectors of private practice has moved into the first semester of the first year, and sometimes the first weeks. Students now make career-defining choices before they have learned to read a case, take a cold call, or sit for a single exam. A majority of the Class of 2028 report that this timing harmed them, and three in four surveyed students tie rising anxiety directly to recruiting pressure. The change also narrows access: students with family or industry connections navigate the compressed calendar far more easily than first-generation students, who report the lowest awareness of these timelines before they enroll. This is not students against firms. Giving the first year room to breathe means better-prepared students, better-matched hires, and classrooms that can teach again.</p>
-  </section>
-
-  <blockquote>
-    "It should give us pause that one of the forces exerting the most pressure on the structure of the first-year curriculum is not pedagogical reform or accreditation standards, but employer recruiting activity."
-    <span class="cite">Nikia Gray, Executive Director, National Association for Law Placement (NALP)</span>
-  </blockquote>
-
-  <section>
-    <h2>Four concerns, one modest response</h2>
-    <div class="concerns">
-      <div class="concern">
-        <h3>1. Integrity of the first-year curriculum</h3>
-        <p>The 1L year builds a lawyer's analytical, ethical, and professional foundation. When recruiting begins in week one, employer activity, not pedagogy, drives the calendar.</p>
-      </div>
-      <div class="concern">
-        <h3>2. Student well-being</h3>
-        <p>Students face professionally consequential decisions before their first exam. Seventy-five percent of surveyed students attribute increased anxiety specifically to recruiting pressure.</p>
-      </div>
-      <div class="concern">
-        <h3>3. Equity and access</h3>
-        <p>Only 25% of students knew these timelines before enrolling, and that awareness concentrated among continuing-generation graduates and the most selective schools.</p>
-      </div>
-      <div class="concern">
-        <h3>4. Health of the hiring market</h3>
-        <p>Employers now hire on less information about performance and interest. Commentators call it a "lose-lose-lose" that no single party can solve alone.</p>
-      </div>
+<div class="band">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="n">85%</div><div class="l">of 2L summer offers now made before July of the 1L year, up from 34% a year earlier</div></div>
+      <div class="stat"><div class="n">80%</div><div class="l">of offers now come through employer-sponsored recruiting, not on-campus interviews</div></div>
+      <div class="stat"><div class="n">25%</div><div class="l">of students knew these timelines before enrolling in law school</div></div>
+      <div class="stat"><div class="n">18</div><div class="l">law-school student governments asked the ABA to act</div></div>
     </div>
-  </section>
-
-  <section>
-    <h2>The students asked first</h2>
-    <div class="coalition">
-      <p>On January 1, 2026, student governments at <b>18 law schools</b> (Columbia, Cornell, Duke, Georgetown, Harvard, Michigan, Northwestern, NYU, Penn, Stanford, Texas, UC Berkeley, UCLA, Chicago, Virginia, Vanderbilt, WashU, and Yale) jointly asked the ABA to review accelerating recruitment. Several backed the request with supermajority student polls.</p>
-      <div class="polls">
-        <div class="poll"><div class="p">98%</div><div class="w">Yale</div></div>
-        <div class="poll"><div class="p">94%</div><div class="w">Virginia</div></div>
-        <div class="poll"><div class="p">93%</div><div class="w">Duke</div></div>
-        <div class="poll"><div class="p">78%</div><div class="w">Chicago</div></div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Why the ABA</h2>
-    <p>No single firm can step back without losing talent to the firm beside it, and no single school can either. Only a national body can prompt the collective action no one player can start alone, and that is the ABA's role. By urging study, it also produces what the profession still lacks: reliable, shared data on what this calendar is doing to legal education, and the footing to adopt a measure adequate to the problem. The resolution prescribes no timeline and assigns no blame. It orders the diagnosis, not the cure.</p>
-  </section>
-
-  <div class="callout">
-    <div class="big">Please vote to adopt.</div>
-    <p style="margin:0;">Study the problem. Protect the first year. <a href="resolution.html">See the full case and sources.</a></p>
   </div>
-
 </div>
+
+<main>
+  <div class="wrap">
+
+    <section>
+      <span class="eyebrow">The problem</span>
+      <h2>Why it matters</h2>
+      <p class="lead">Since 2024, hiring for the largest sectors of private practice has moved into the first semester of the first year, and sometimes the first weeks. Students now make career-defining choices before they have learned to read a case, take a cold call, or sit for a single exam. A majority of the Class of 2028 report that this timing harmed them, and three in four surveyed students tie rising anxiety directly to recruiting pressure. The change also narrows access: students with family or industry connections navigate the compressed calendar far more easily than first-generation students, who report the lowest awareness of these timelines before they enroll. Giving the first year room to breathe means better-prepared students, better-matched hires, and classrooms that can teach again.</p>
+    </section>
+
+    <section>
+      <span class="eyebrow">The case, in brief</span>
+      <h2>Four concerns, one modest response</h2>
+      <div class="concerns">
+        <div class="concern">
+          <h3>Integrity of the first year</h3>
+          <p>The 1L year builds a lawyer's analytical, ethical, and professional foundation. When recruiting begins in week one, employer activity, not pedagogy, drives the calendar.</p>
+        </div>
+        <div class="concern">
+          <h3>Student well-being</h3>
+          <p>Students face professionally consequential decisions before their first exam. Seventy-five percent of surveyed students attribute increased anxiety specifically to recruiting pressure.</p>
+        </div>
+        <div class="concern">
+          <h3>Equity and access</h3>
+          <p>Only 25% of students knew these timelines before enrolling, and that awareness concentrated among continuing-generation graduates and the most selective schools.</p>
+        </div>
+        <div class="concern">
+          <h3>Health of the hiring market</h3>
+          <p>Employers now hire on less information about performance and interest. Commentators call it a "lose-lose-lose" that no single party can solve alone.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <span class="eyebrow">The students asked first</span>
+      <h2>A coalition of law schools</h2>
+      <div class="coalition">
+        <p>On January 1, 2026, student governments at <span class="schools">18 law schools</span> (Columbia, Cornell, Duke, Georgetown, Harvard, Michigan, Northwestern, NYU, Penn, Stanford, Texas, UC Berkeley, UCLA, Chicago, Virginia, Vanderbilt, WashU, and Yale) jointly asked the ABA to review accelerating recruitment. Several backed the request with student polls showing supermajority support.</p>
+      </div>
+    </section>
+
+    <section>
+      <blockquote>
+        "It should give us pause that one of the forces exerting the most pressure on the structure of the first-year curriculum is not pedagogical reform or accreditation standards, but employer recruiting activity."
+        <span class="cite">Nikia Gray, Executive Director, National Association for Law Placement (NALP)</span>
+      </blockquote>
+    </section>
+
+    <div class="callout">
+      <div class="big">Please vote to adopt.</div>
+      <p>Study the problem. Protect the first year. <a href="resolution.html">See the full case and sources &rarr;</a></p>
+    </div>
+
+  </div>
+</main>
 
 <footer>
   <div class="wrap">
