@@ -6,235 +6,149 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
-  @page {
-    size: A4;
-    margin: 12mm 12mm 10mm 12mm;
-  }
+  @page { size: A4; margin: 10mm 13mm 8mm 13mm; }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
   body {
     font-family: "Georgia", "Times New Roman", serif;
-    color: #212a37;
-    font-size: 10.2pt;
-    line-height: 1.34;
+    color: #212a37; font-size: 11pt; line-height: 1.38;
   }
   .sans { font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; }
-  .serif { font-family: "Playfair Display", Georgia, serif; }
-  .page { page-break-after: always; }
-  .page:last-child { page-break-after: auto; }
 
-  /* ---------- Masthead ---------- */
+  /* masthead */
   .topbar {
     display: flex; justify-content: space-between; align-items: baseline;
     font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
-    font-size: 7.6pt; letter-spacing: .09em; text-transform: uppercase;
+    font-size: 8.4pt; letter-spacing: .09em; text-transform: uppercase;
     color: #8a6a2e; font-weight: 700;
-    border-bottom: 1.5pt solid #1c2a39; padding-bottom: 4pt; margin-bottom: 10pt;
+    border-bottom: 1.5pt solid #1c2a39; padding-bottom: 5pt; margin-bottom: 12pt;
   }
   .topbar .r { color: #55617a; }
 
   h1 {
     font-family: "Playfair Display", Georgia, serif;
-    font-size: 23pt; line-height: 1.06; margin: 3pt 0 3pt 0; color: #1c2a39;
+    font-size: 26pt; line-height: 1.05; margin: 2pt 0 3pt 0; color: #1c2a39;
     letter-spacing: -0.005em; font-weight: 700;
   }
-  .subtitle { font-size: 10.3pt; color: #4a5468; font-style: italic; margin-bottom: 11pt; }
+  .subtitle { font-size: 11.5pt; color: #4a5468; font-style: italic; margin-bottom: 13pt; }
 
-  /* ---------- The Ask box ---------- */
+  /* Ask box */
   .ask {
     border: 1.4pt solid #1c2a39; border-left: 7pt solid #b0883b;
-    background: #faf6ec; padding: 11pt 13pt 10pt 13pt; margin-bottom: 11pt;
-    border-radius: 2pt;
+    background: #faf6ec; padding: 12pt 15pt 11pt 15pt; margin-bottom: 11pt; border-radius: 2pt;
   }
   .ask .kicker {
     font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; font-weight: 800;
-    font-size: 8.4pt; letter-spacing: .14em; text-transform: uppercase;
-    color: #8a6a2e; margin-bottom: 4pt;
+    font-size: 9pt; letter-spacing: .13em; text-transform: uppercase; color: #8a6a2e; margin-bottom: 5pt;
   }
-  .ask p { margin: 0 0 6pt 0; font-size: 10.6pt; line-height: 1.4; }
-  .ask ol { margin: 4pt 0 0 0; padding-left: 18pt; }
-  .ask li { margin-bottom: 3pt; }
+  .ask p { margin: 0 0 6pt 0; font-size: 11.4pt; line-height: 1.4; }
+  .ask ol { margin: 5pt 0 0 0; padding-left: 18pt; }
+  .ask li { margin-bottom: 4pt; font-size: 11pt; }
   .ask li:last-child { margin-bottom: 0; }
 
-  /* ---------- Data band ---------- */
-  .stats { display: flex; gap: 8pt; margin-bottom: 11pt; }
-  .stat {
-    flex: 1; text-align: center; background: #1c2a39; color: #fff;
-    border-radius: 3pt; padding: 8pt 5pt 7pt 5pt;
-  }
-  .stat .n { font-family: "Playfair Display", Georgia, serif; font-weight: 700;
-    font-size: 20pt; line-height: 1; display: block; }
-  .stat .l { font-size: 7.7pt; line-height: 1.2; display: block; margin-top: 4pt; color: #cdd8ea; }
+  /* stats */
+  .stats { display: flex; gap: 9pt; margin-bottom: 11pt; }
+  .stat { flex: 1; text-align: center; background: #1c2a39; color: #fff; border-radius: 3pt; padding: 9pt 6pt 8pt 6pt; }
+  .stat .n { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 22pt; line-height: 1; display: block; }
+  .stat .l { font-size: 8.2pt; line-height: 1.22; display: block; margin-top: 5pt; color: #cdd8ea; }
   .stat.gold { background: #8a6a2e; }
   .stat.gold .l { color: #ecdcc0; }
 
   h2.section {
-    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; font-size: 9pt;
+    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; font-size: 9.6pt;
     letter-spacing: .11em; text-transform: uppercase; color: #8a6a2e;
-    border-bottom: 1pt solid #d9cfba; padding-bottom: 3pt; margin: 12pt 0 6pt 0;
-    font-weight: 700;
+    border-bottom: 1pt solid #d9cfba; padding-bottom: 4pt; margin: 0 0 9pt 0; font-weight: 800;
   }
-  p.body { margin: 0 0 7pt 0; text-align: justify; }
 
-  /* ---------- Footer / CTA ---------- */
-  .cta {
-    display: flex; align-items: center; gap: 12pt; margin-top: 12pt;
-    border-top: 1.5pt solid #1c2a39; padding-top: 9pt;
-  }
-  .cta .qr { width: 74pt; height: 74pt; flex: 0 0 auto; }
-  .cta .qr img { width: 74pt; height: 74pt; display: block; }
-  .cta .txt { flex: 1; }
-  .cta .vote {
-    font-family: "Playfair Display", Georgia, serif; font-weight: 700;
-    font-size: 14pt; color: #1c2a39; margin: 0 0 3pt 0; letter-spacing: .01em;
-  }
-  .cta .sub { font-size: 8.8pt; color: #4a5468; margin: 0 0 4pt 0; }
-  .cta .contact { font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; font-size: 8pt; color: #55617a; }
-  .cta .contact b { color: #1c2a39; }
-
-  /* ---------- Back page ---------- */
-  .backhead {
-    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
-    border-bottom: 1.5pt solid #1c2a39; padding-bottom: 5pt; margin-bottom: 10pt;
-  }
-  .backhead .t { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 15pt; color: #1c2a39; }
-  .backhead .s { font-size: 8.4pt; color: #8a6a2e; letter-spacing: .09em; text-transform: uppercase; font-weight:700; }
-
-  .concern { margin-bottom: 8pt; }
+  /* concerns as 2x2 grid */
+  .concerns { display: flex; flex-wrap: wrap; gap: 9pt 18pt; margin-bottom: 11pt; }
+  .concern { flex: 0 0 calc(50% - 9pt); }
   .concern .h {
     font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; font-weight: 800;
-    font-size: 9.6pt; color: #1c2a39;
+    font-size: 10.2pt; color: #1c2a39;
   }
   .concern .h .num { color: #b0883b; }
-  .concern p { margin: 1pt 0 0 0; font-size: 9.7pt; line-height: 1.34; }
+  .concern p { margin: 2pt 0 0 0; font-size: 10pt; line-height: 1.34; }
 
-  .coalition {
-    background: #faf6ec; border: 1pt solid #d9cfba; border-radius: 3pt;
-    padding: 10pt 12pt; margin-bottom: 9pt;
-  }
-  .coalition .schools { font-size: 9pt; line-height: 1.45; color: #2a3446; }
-  .coalition .schools b { color: #1c2a39; }
+  /* credibility */
+  .cred { background: #faf6ec; border: 1pt solid #d9cfba; border-radius: 3pt; padding: 10pt 14pt; margin-bottom: 11pt; }
+  .cred p { margin: 0; font-size: 9.8pt; line-height: 1.42; color: #2a3446; }
+  .cred b { color: #1c2a39; }
 
-  .sources { font-size: 7.4pt; color: #5a6478; line-height: 1.42; margin-top: 4pt; }
+  /* CTA */
+  .cta { display: flex; align-items: center; gap: 15pt; border-top: 1.5pt solid #1c2a39; padding-top: 9pt; }
+  .cta .qr { width: 82pt; height: 82pt; flex: 0 0 auto; }
+  .cta .qr img { width: 82pt; height: 82pt; display: block; }
+  .cta .txt { flex: 1; }
+  .cta .vote { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 16pt; color: #1c2a39; margin: 0 0 3pt 0; }
+  .cta .sub { font-size: 9.4pt; color: #4a5468; margin: 0 0 4pt 0; line-height: 1.35; }
+  .cta .contact { font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; font-size: 8.4pt; color: #55617a; line-height: 1.4; }
+  .cta .contact b { color: #1c2a39; }
+
+  .sources { font-size: 7.6pt; color: #6a7284; line-height: 1.4; margin-top: 8pt; }
   .sources b { color: #1c2a39; }
-  .stamp {
-    font-family:"Open Sans","Helvetica Neue",Arial,sans-serif; font-size:8pt; color:#4a5468;
-    border-top:1pt solid #d9cfba; margin-top:9pt; padding-top:6pt;
-  }
-  .stamp b { color:#1c2a39; }
-
-  /* front page fills the sheet so the footer anchors the bottom */
-  #front { position: relative; height: 270mm; }
-  .frontfoot {
-    position: absolute; bottom: 0; left: 0; right: 0;
-    display: flex; justify-content: space-between; align-items: center;
-    background: #1c2a39; color: #fff; border-radius: 3pt;
-    padding: 9pt 16pt;
-  }
-  .frontfoot .a {
-    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; font-weight: 800;
-    font-size: 10.5pt; letter-spacing: .02em; text-align: center; flex: 1;
-  }
-  .frontfoot .a + .a { border-left: 1pt solid #3a4c6e; }
-
-  .pullquote {
-    margin: 16pt 8pt 0 8pt; padding: 0 0 0 14pt;
-    border-left: 3pt solid #b0883b;
-  }
-  .pullquote .q { font-family: "Playfair Display", Georgia, serif; font-size: 12.5pt; line-height: 1.4; color: #1e2c47; font-style: italic; }
-  .pullquote .a {
-    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; font-size: 8.6pt;
-    color: #8a6a2e; font-weight: 700; margin-top: 5pt; letter-spacing: .02em;
-  }
 </style>
 </head>
 <body>
 
-<!-- ============ FRONT (stands alone) ============ -->
-<div class="page" id="front">
-  <div class="topbar">
-    <span>A Resolution Before the ABA House of Delegates</span>
-    <span class="r">Annual Meeting &middot; Chicago &middot; 2026</span>
-  </div>
-
-  <h1>Let Law Students<br>Become Law Students First</h1>
-  <div class="subtitle">A resolution on accelerated law-firm recruiting. Sponsored by the Bar Association of the District of Columbia, with a coalition of law schools.</div>
-
-  <div class="ask">
-    <div class="kicker">What we ask you to adopt</div>
-    <p>A resolution urging law schools, legal employers, bar associations, and other stakeholders to:</p>
-    <ol>
-      <li><b>Study</b> how accelerating recruitment timelines affect legal education, student well-being, and the entry-level hiring market; and</li>
-      <li><b>Consider</b>, in their own recruiting practices, the educational, professional, and equitable interests of law students.</li>
-    </ol>
-  </div>
-
-  <div class="stats">
-    <div class="stat"><span class="n">85%</span><span class="l">of 2L summer offers now made before July of the 1L year, up from 34% a year earlier</span></div>
-    <div class="stat gold"><span class="n">80%</span><span class="l">of offers now come through employer-sponsored recruiting, not on-campus interviews</span></div>
-    <div class="stat"><span class="n">18</span><span class="l">law-school student governments asked the ABA to act</span></div>
-  </div>
-
-  <h2 class="section">Why it matters</h2>
-  <p class="body">Since 2024, hiring for the largest sectors of private practice has moved into the first semester of the first year, sometimes the first weeks. Students now make career-defining choices before they have learned to read a case, take a cold call, or sit for a single exam. A majority of the Class of 2028 report that this timing harmed them, and three in four surveyed students tie rising anxiety directly to recruiting pressure. The change also narrows access: students with family or industry connections navigate the compressed calendar far more easily than first-generation students, who report the lowest awareness of these timelines before they enroll. This is not students against firms. Giving the first year room to breathe means better-prepared students, better-matched hires, and classrooms that can teach again.</p>
-
-  <div class="pullquote">
-    <div class="q">"It should give us pause that one of the forces exerting the most pressure on the structure of the first-year curriculum is not pedagogical reform or accreditation standards, but employer recruiting activity."</div>
-    <div class="a">Nikia Gray, Executive Director, National Association for Law Placement (NALP)</div>
-  </div>
-
-  <div class="cta">
-    <div class="qr"><img src="qr_site.png" alt="QR code to resolution website"></div>
-    <div class="txt">
-      <p class="vote">Please vote to ADOPT.</p>
-      <p class="sub">Scan for the one-page summary, the full resolution, the data, and the coalition, at <span class="sans">codesisyphus.github.io/law-student-hiring-resolution</span></p>
-      <p class="contact"><b>Contacts:</b> Philippe Lin, plin@vasquezlawdc.com &middot; (812) 345-7083 &nbsp;|&nbsp; Lorie Masters, lmasters@hunton.com &middot; (202) 595-4600</p>
-    </div>
-  </div>
-
-  <div class="frontfoot">
-    <span class="a">Study the problem.</span>
-    <span class="a">Protect the first year.</span>
-    <span class="a">Adopt the resolution.</span>
-  </div>
+<div class="topbar">
+  <span>A Resolution Before the ABA House of Delegates</span>
+  <span class="r">Annual Meeting &middot; Chicago &middot; 2026</span>
 </div>
 
-<!-- ============ BACK (deeper detail) ============ -->
-<div class="page">
-  <div class="backhead">
-    <div class="s">The case, in brief</div>
-    <div class="t">Four concerns, one modest response</div>
-  </div>
+<h1>Let Law Students Become Law Students First</h1>
+<div class="subtitle">A resolution on accelerated law-firm recruiting.</div>
 
+<div class="ask">
+  <div class="kicker">What we ask you to adopt</div>
+  <p>A resolution urging law schools, legal employers, bar associations, and other stakeholders to:</p>
+  <ol>
+    <li><b>Study</b> how accelerating recruitment timelines affect legal education, student well-being, and the entry-level hiring market; and</li>
+    <li><b>Consider</b>, in their own recruiting practices, the educational, professional, and equitable interests of law students.</li>
+  </ol>
+</div>
+
+<div class="stats">
+  <div class="stat"><span class="n">85%</span><span class="l">of 2L summer offers now made before July of the 1L year, up from 34% a year earlier</span></div>
+  <div class="stat gold"><span class="n">80%</span><span class="l">of offers now come through employer-sponsored recruiting, not on-campus interviews</span></div>
+  <div class="stat"><span class="n">18</span><span class="l">law-school student governments asked the ABA to act</span></div>
+</div>
+
+<h2 class="section">Four concerns, one modest response</h2>
+<div class="concerns">
   <div class="concern">
-    <div class="h"><span class="num">1.</span> Integrity of the first-year curriculum.</div>
-    <p>The 1L year builds the analytical, ethical, and professional foundation of a lawyer's career. When recruiting begins in week one, employer activity, not pedagogy, drives the calendar. As one associate dean put it, "we need law students to become law students first."</p>
+    <div class="h"><span class="num">1.</span> Integrity of the first year.</div>
+    <p>The 1L year builds a lawyer's analytical, ethical, and professional foundation. When recruiting begins in week one, employer activity, not pedagogy, drives the calendar.</p>
   </div>
   <div class="concern">
     <div class="h"><span class="num">2.</span> Student well-being.</div>
-    <p>Students face professionally consequential decisions before their first exam. Seventy-five percent of surveyed students attribute increased anxiety specifically to recruiting pressure; a majority of the Class of 2028 report a negative impact.</p>
+    <p>Seventy-five percent of surveyed students tie increased anxiety directly to recruiting pressure, and a majority of the Class of 2028 report a negative impact.</p>
   </div>
   <div class="concern">
     <div class="h"><span class="num">3.</span> Equity and access.</div>
-    <p>Only 25% of students knew these timelines before enrolling, and that awareness concentrated among continuing-generation graduates and the most selective schools. A compressed calendar rewards pre-existing networks and disadvantages first-generation students.</p>
+    <p>Only 25% of students knew these timelines before enrolling. A compressed calendar rewards pre-existing networks and disadvantages first-generation students.</p>
   </div>
   <div class="concern">
     <div class="h"><span class="num">4.</span> Health of the hiring market.</div>
-    <p>Employers now hire on less information about academic performance and demonstrated interest. Commentators call it a "lose-lose-lose" for students, schools, and firms: a collective-action problem no one party can solve alone.</p>
+    <p>Employers now hire on less information about performance and interest. Commentators call it a "lose-lose-lose" that no single party can solve alone.</p>
   </div>
+</div>
 
-  <h2 class="section" style="margin-top:11pt;">The students asked first</h2>
-  <div class="coalition">
-    <div class="schools">On January 1, 2026, student governments at <b>18 law schools</b> (Columbia, Cornell, Duke, Georgetown, Harvard, Michigan, Northwestern, NYU, Penn, Stanford, Texas, UC Berkeley, UCLA, Chicago, Virginia, Vanderbilt, WashU, and Yale) jointly asked the ABA to review accelerating recruitment. Several backed the request with student polls showing supermajority support. After dialogue with ABA leadership, the coalition was encouraged to bring a resolution and reached out to the Bar Association of the District of Columbia, which agreed to sponsor it.</div>
-  </div>
+<div class="cred">
+  <p><b>The students asked first.</b> On January 1, 2026, student governments at 18 law schools (Columbia, Cornell, Duke, Georgetown, Harvard, Michigan, Northwestern, NYU, Penn, Stanford, Texas, UC Berkeley, UCLA, Chicago, Virginia, Vanderbilt, WashU, and Yale) jointly asked the ABA to review accelerating recruitment, several backed by student polls showing supermajority support. <b>Sponsored by the Bar Association of the District of Columbia, with a coalition of law schools.</b> Approved by the BADC Board of Directors and recommended by its Young Lawyers Section; the drafters are aware of no opposition.</p>
+</div>
 
-  <div class="stamp">
-    <b>Status:</b> Approved by the BADC Board of Directors, July 15, 2026; recommended by the BADC Young Lawyers Section. The drafters are aware of <b>no opposition</b>. Builds on existing ABA policy 23A523 (holistic evaluation) and 24A515 (OCI pay transparency).
+<div class="cta">
+  <div class="qr"><img src="qr_site.png" alt="QR code to resolution website"></div>
+  <div class="txt">
+    <p class="vote">Please vote to ADOPT.</p>
+    <p class="sub">Scan for the full resolution, the report, the data, the coalition, and sources, at <span class="sans">codesisyphus.github.io/law-student-hiring-resolution</span></p>
+    <p class="contact"><b>Contacts:</b> Philippe Lin, plin@vasquezlawdc.com &middot; (812) 345-7083 &nbsp;|&nbsp; Lorie Masters, lmasters@hunton.com &middot; (202) 595-4600</p>
   </div>
+</div>
 
-  <div class="sources">
-    <b>Sources:</b> NALP, <i>Perspectives on 2025 Law Student Recruiting</i> (Jan. 2026); LSAC &amp; NALP, <i>2025 1L Class: Student Awareness and Impact of Accelerated Big Law Recruitment</i> (June 2026); Law.com (June 11, 2026); BCG Attorney Search (Feb. 2026); ABA Journal (May 14, 2026); Bloomberg Law (Dec. 11, 2025); Coalition Letter to the ABA Section of Legal Education (Jan. 1, 2026). Full citations at the site above.
-  </div>
+<div class="sources">
+  <b>Sources:</b> NALP, <i>Perspectives on 2025 Law Student Recruiting</i> (Jan. 2026); LSAC &amp; NALP, <i>2025 1L Class: Student Awareness and Impact of Accelerated Big Law Recruitment</i> (June 2026); Law.com (June 11, 2026); Bloomberg Law (Dec. 11, 2025); ABA Journal (May 14, 2026). Full citations at the site above. Builds on existing ABA policy 23A523 and 24A515.
 </div>
 
 </body>
